@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/lib/bootstrap.min.css">
+    <script src="/lib/jquery-1.12.2.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  
+      
+      
+    <title>หน้าสินค้าAdmin</title>
+    <style>
+  
+  /* body,p,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}  */
+    body {
+    background-image: url('../images/pexels-lumn-167698.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: auto;
+    height: 100%;
+    color: #fd8905;
+    line-height: 1.8;
+}
+
+
+    * {
+  box-sizing: border-box;
+}
+
+.form-control{
+  width: 50%;
+
+
+
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+
+  width: 90%;
+  margin: 0 -5px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 10%;
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  text-align: center;
+  background-color: #f1f1f1;
+  margin-bottom: 1em;
+  height: 500px;
+
+}
+
+
+    </style>
+    
+</head>
+<body>
+
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="/" class="w3-bar-item w3-button">logout</a>
+      <a href="/insertForm" class="w3-bar-item w3-button w3-hide-small">เพิ่มรายการสินค้า</a> 
+      <a href="/dashboard" class="w3-bar-item w3-button w3-hide-small"> DASHBOARD</a>
+      
+    </div>
+  
+  </div><br><br>
+    
+
+  
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    
+  
+    <a href="/memberForm" class="w3-bar-item w3-button"><i class="fa fa-user"></i>สมัครสมาชิก</a>
+    <a href="/loginForm" class="w3-bar-item w3-button"><i class="fa fa-th"></i> เข้าสู่ระบบADMIN</a>
+    <a href="/login" class="w3-bar-item w3-button"><i class="fa fa-th"></i> เข้าสู่ระบบ</a>
+    <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    
+    </div>
+  </div><br><br>
+
+
+
+  
+  <h1><center>  </center></h1><br>
+  <center> <form method="get" action="searchForm">
+  <input type="text" name="q" type="text" placeholder="ค้นหาสินค้า"  value="" /> 
+  <button><i class="fa fa-search"></i></button>
+  </form><button class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"></button></center> <br>
+ 
+    
+    
+  
+  
+   
+
+
+
+
+  <div class="container">
+    <div class="row">
+      <% for(var i=0; i < product.length; i++) { %>
+        <% if (i % 3 === 0) { %>
+          <div class="col-md-4 mx-auto text-center">
+        <% } else if (i % 3 === 1) { %>
+          <div class="col-md-4 mx-auto text-center">
+        <% } else { %>
+          <div class="col-md-4 mx-auto text-center">
+        <% } %>
+          <div class="card">
+            <!-- <style>
+              .product-image {
+                 width: 300px;
+                 height: 300px;
+              }
+           </style> -->
+           <form action="/orders" >
+            <br>
+            <img class="card-img-top" src="<%= '/images/' + product[i].image %>" alt="Product Picture">
+            <div class="card-body">
+              <h5 class="card-title"><%= product[i].product_Name %></h5>
+              <p class="card-text">Price: <%= product[i].product_price %></p>
+              
+
+              <center><div class="btn-group">
+                <p ><a href="/updateForm/<%=product[i].product_ID%>" class="btn btn-primary">Edit</a>  
+                <a  href="/productForm/<%=product[i].product_ID%>" class="btn btn-primary">Delete</a></p>
+            </div></center>
+              <style>
+                .add-to-cart-button {
+                  padding: 10px 20px;
+                  background-color: #094a8067;
+                  color: 333;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                }
+              </style>
+            </div>
+          </form>        
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+<script>
+ 
+  // Change style of navbar on scroll
+  window.onscroll = function() {myFunction()};
+  function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+      } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+      }
+  }
+  
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else {
+          x.className = x.className.replace(" w3-show", "");
+      }
+  }
+  </script>    
+    
+    
+  </body>
+</html>

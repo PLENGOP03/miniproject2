@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    หน้าหลัก
+  </title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body,p,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;} 
+     body, html {
+    background-image: url('images/pexels-lumn-167698.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: auto;
+  height: 100%;
+  color: #fd8905;
+  line-height: 1.8;
+} 
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 83%;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('/images/Camping555.jpg');
+  
+  min-height: 100%;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="/memberForm" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i>สมัครสมาชิก</a>
+    <a href="/loginForm" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> เข้าสู่ระบบADMIN</a>
+    <a href="/login" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> เข้าสู่ระบบ</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    
+    
+  
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    
+  
+  <a href="/memberForm" class="w3-bar-item w3-button"><i class="fa fa-user"></i>สมัครสมาชิก</a>
+  <a href="/loginForm" class="w3-bar-item w3-button"><i class="fa fa-th"></i> เข้าสู่ระบบADMIN</a>
+  <a href="/login" class="w3-bar-item w3-button"><i class="fa fa-th"></i> เข้าสู่ระบบ</a>
+  <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+  
+  </div>
+</div><br><br>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">เกี่ยวกับร้านเรา</h3>
+  <p class="w3-center"><em>Camping SHOP</em></p>
+  <center><p>ร้านเราขายอุปกรณ์เเคมป์ปิง หลากหลายรูปแบบไม่ว่าจะเป็น เต็นท์ ถุงนอน เก้าอี้สนาม กระเป๋ากันน้ำ เตาเเก็สเเคมป์ปิง</p></center>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b></i>ตัวอย่างสินค้า</b></p><br>
+      <img src="/images/Aurora-V.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m5 w3-hide-small w3-padding-large">
+      <p>เต็นท์นอนสนามเดินป่า รุ่น Aurora V 2020 Tents ขนาด 5-6 คนนอน
+        <p>สีเต็นท์ : สีน้ำเงิน-กรม , เขียวขี้ม้า-เขียวเข้ม</p>
+        <p>ขนาด: 270 x 270 x 195 ซม. </p>
+        <p>วัสดุ: ตัวเต๊นท์เป็นผ้าร่มโพลีเอสเตอร์ 230T เคลือบกันน้ำ 3,500มม. ฟลายชีสเต็นท์เป็นผ้าร่มโพลีเอสเตอร์ 230T เคลือบกันน้ำ 3,500มม. ผ้าพื้นเต็นท์ PE เคลือบกันน้ำ 2 ด้าน เสาไฟเบอร์อย่างดี</p> 
+        <p>น้ำหนัก: 8. กก. </p>
+        <p>คุณสมบัติเต้นท์ : มีขนาด 2 ประตู 2 หน้าต่าง ประตูและช่องหน้าต่างกว้างขวาง สามารถระบายอากาศได้ดี และรับลมได้เต็มที่ สามารถกันน้ำฝนและน้ำค้างได้ ตัวเต็นท์มีมุ้งในตัวกันยุงและแมลงได้</p> 
+         
+        เทคโนโลยีพิเศษ: ตะเข็บตามเต๊นท์ เคลือบน้ำยากันน้ำซึม ตามมุมพื้นทั้ง4มุม เคลือบน้ำยากันน้ำซึม เพื่อป้องกัน น้ำเข้าในตัวเต็นท์
+        <p>1.มีช่องระบายอากาศ เปิด-ปิด (ด้านบน)</p>
+        <p>2.มีช่องสอดสายไฟ สามารถสอดท่อแอร์ได้</p>
+        <p>3.มีช่องระบายอากาศ มุมด้านล่าง ช่วยให้อากาศถ่ายเทภายในเต็นท์ ทำให้เกิดน้ำค้างหรือหยดน้ำค้างในเต็นท์น้อยลง</p>
+        <p>4.ตะเข็บกนน้ำ ด้านใน</p>
+    </div>
+  </div>
+  <p class="w3-large w3-center w3-padding-10"></p>
+  
+    
+  </div>
+</div>
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-10" id="contact">
+  <h3 class="w3-center">ข้อมูลร้านเรา</h3>
+  
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> ธัญบุรีคลอง6,ปทุมธานี<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 02-345-6789 <br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: CampingSHOP@gmail.com<br>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64  w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
